@@ -89,7 +89,7 @@ Optional:
 ## Wireframes
 
 ![](https://i.imgur.com/WYiR1LL.jpg)
-
+![](https://imgur.com/a/i9WlI7t)
 
 ### [BONUS] Digital Wireframes & Mockups
 
