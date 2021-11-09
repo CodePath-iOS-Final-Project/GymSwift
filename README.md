@@ -61,6 +61,8 @@ Our plan is to create an app for college students to hold them accountable so th
     * Allow users to interact with GymSwift users and post progress and include messages of encouragement.
 * Settings Screen
     * People can set app notification settings, change profile pic, update their preferred workout and light/dark mode feature.  
+* Workout Journal Screen
+    * People can jot their notes for their workouts and create new posts as well as delete any existing posts. 
 
 
 
@@ -94,10 +96,58 @@ Optional:
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+
+| Property | Type | Description |
+| -------- | -------- | -------- |
+|   objectId   |  String  | unique id for the user post (default field)    |
+| user | Pointer to User | image user
+|address | String | location marked on the map
+|     image |   File |    image that user posts |
+|     caption |  String  |   image caption by author  |
+|     exerciseTypeID|  String  |  unique id for the exercise post (default field)    ||    |     |
+|    commentsCount  | Number   |   number of comments that has been posted to an image  |
+|    createdAt  |  DateTime  |  date when post is created (default field)   | |
+|  updatedAt    |    DateTime|   date when post is last updated (default field)  |
+
+
+
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+- Profile Screen
+    - (Read/GET) Query logged in user object
+    - (Update/PUT) Update exercise status 
+
+- Accountability Screen
+    - (Read/GET) Query all posts where user and user's group as author
+        ```swift 
+        let query = PFQuery(className:"Post")
+        query.whereKey("author", equalTo:"currentUser")
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+            // Log details of the failure
+              print(error.localizedDescription)
+            } else if let objects = objects {
+            // The find succeeded.
+              print("Successfully retrieved \(objects.count) scores.")
+            // Do something with the found objects
+              for object in objects {
+              print(object.objectId as Any)
+            }
+          }
+        }
+        ```
+    - (Create/POST) Create a new post
+    - (Create/POST) Create a new like on a post
+    - (Delete) Delete an existing like
+    - (Create/POST) Create a new comment on a post
+    - (Delete) Delete existing comment
+
+- Workout Journal Screen
+    - (Read/GET) Query all posts where user is author
+    - (Create/POST) Create a new post
+    - (Delete) Delete an existing post
+ 
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
