@@ -29,22 +29,32 @@ Our plan is to create an app for college students to hold them accountable so th
 
 **Required Must-have Stories**
 
-* Users can log in and log out
-* Users set, change, remove profile photo
-* User can pull to refresh
-* Infinite scroll
-* User stays logged in across restarts
-* User can view comments 
-* Users can add comment
-* Users profile picture is shown.
+[ ] Users can log in and log out
+
+[ ] Users set, change, remove profile photo
+
+[ ] User can pull to refresh
+
+[ ] Infinite scroll
+
+[ ] User stays logged in across restarts
+
+[ ] User can view comments 
+
+[ ] Users can add comment
+
+[ ] Users profile picture is shown.
 
 **Optional Nice-to-have Stories**
 
 
-* Users in the same common interest group have a chat window to get to know each other, with the ability to skip users and unmatch.  
-* Private Chat Messages
-* Light mode and dark mode features.
-* Tag your workout partner(s). 
+[ ] Users in the same common interest group have a chat window to get to know each other, with the ability to skip users and unmatch.
+
+[ ] Private Chat Messages
+
+[ ] Light mode and dark mode features.
+
+[ ] Tag your workout partner(s). 
 
 
 ### 2. Screen Archetypes
@@ -88,7 +98,6 @@ Optional:
 
 ## Wireframes
 
-![](https://i.imgur.com/WYiR1LL.jpg)
 ![](https://i.imgur.com/a/i9WlI7t.jpg)
 ![](https://i.imgur.com/kVqohjd.jpeg)
 <!-- (last link works!) -->
