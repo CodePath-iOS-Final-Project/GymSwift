@@ -112,6 +112,8 @@ Here's a walkthrough of implemented user stories:
 
 https://imgur.com/a/nU9qoVK.gif
 
+https://i.imgur.com/uTtCAIx.gif
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
