@@ -10,4 +10,6 @@ target 'GymSwift' do
 
   # Pods for GymSwift
 
+  pod 'TTGTagCollectionView'
+
 end
