@@ -29,7 +29,11 @@ Our plan is to create an app for college students to hold them accountable so th
 
 **Required Must-have Stories**
 
-[ ] Users can log in and log out
+[x] Users can sign up and sign in.
+
+[x] Users can select a specific type of exercise.
+
+[ ] Users can log in and log out.
 
 [ ] Users set, change, remove profile photo
 
