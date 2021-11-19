@@ -20,16 +20,14 @@ class SignUpViewController: UIViewController {
 
 
     @IBAction func nextButton(_ sender: Any) {
-        //placeholder Test for -> Excercise Selection Screen
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
         user["name"] = nameField.text
         user["workoutGoals"] = workoutGoalsField.text
-        //PLACEHOLDER FOR Excercise Selection Screen!!!
         user.signUpInBackground { (success, error) in
             if success {
-                self.performSegue(withIdentifier: "signupSegue", sender: nil)
+                self.performSegue(withIdentifier: "exerciseSegue", sender: nil)
             }
             else{
                 print("Error: \(error?.localizedDescription)")
@@ -43,16 +41,5 @@ class SignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
