@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -245,21 +246,35 @@
             </objects>
             <point key="canvasLocation" x="2645" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="A20-2Q-qcu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="C6l-z2-0yV" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="C6l-z2-0yV" customClass="MapViewController" customModule="GymSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ew-cq-Tjs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-pa-eWf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hDh-9q-Op2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hDh-9q-Op2" firstAttribute="trailing" secondItem="jjt-pa-eWf" secondAttribute="trailing" id="Ddc-EY-jDB"/>
+                            <constraint firstItem="jjt-pa-eWf" firstAttribute="top" secondItem="hDh-9q-Op2" secondAttribute="top" id="QJF-qq-5QF"/>
+                            <constraint firstItem="hDh-9q-Op2" firstAttribute="bottom" secondItem="jjt-pa-eWf" secondAttribute="bottom" id="ZFi-EP-mwn"/>
+                            <constraint firstItem="jjt-pa-eWf" firstAttribute="leading" secondItem="hDh-9q-Op2" secondAttribute="leading" id="jtm-o4-stj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yN1-LL-Ad2"/>
+                    <connections>
+                        <outlet property="mapView" destination="jjt-pa-eWf" id="kka-sK-bjW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAf-9D-7aM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013" y="1596"/>
+            <point key="canvasLocation" x="1793" y="1596"/>
         </scene>
         <!--Posts-->
         <scene sceneID="fzf-1F-7Bi">
@@ -293,7 +308,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="8" reuseIdentifier="PostCell" rowHeight="202" id="Vcj-NI-7nM" customClass="PostCell" customModule="GymSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="202"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vcj-NI-7nM" id="RKc-nG-OHU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
@@ -585,7 +600,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="e0T-XX-Qzk"/>
+        <segue reference="oh1-gi-OUJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

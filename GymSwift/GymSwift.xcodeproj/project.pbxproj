@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472F233A274C37FF00FE5448 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F2339274C37FF00FE5448 /* MapViewController.swift */; };
 		A271EE112742E73900A82F5E /* ExcerciseSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A271EE102742E73900A82F5E /* ExcerciseSelectionViewController.swift */; };
 		BC80C74B09AF162470C5D144 /* Pods_GymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26933D6F7FAA608A54832018 /* Pods_GymSwift.framework */; };
 		E318512A273F289C006104E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3185129273F289C006104E3 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		26933D6F7FAA608A54832018 /* Pods_GymSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		472F2339274C37FF00FE5448 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A271EE102742E73900A82F5E /* ExcerciseSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseSelectionViewController.swift; sourceTree = "<group>"; };
 		CF4B939B22FE6E28B5F5607D /* Pods-GymSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymSwift.debug.xcconfig"; path = "Target Support Files/Pods-GymSwift/Pods-GymSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		E3185126273F289C006104E3 /* GymSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				E3272A3D273F466600E536F3 /* SignUpViewController.swift */,
 				A271EE102742E73900A82F5E /* ExcerciseSelectionViewController.swift */,
 				E32CA9EE274739180052F16D /* SettingsViewController.swift */,
+				472F2339274C37FF00FE5448 /* MapViewController.swift */,
 			);
 			path = GymSwift;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				E3BE1844273F2C4100D1FC98 /* LoginViewController.swift in Sources */,
 				E35722AB2747845200CD5ED4 /* FeedViewController.swift in Sources */,
 				A271EE112742E73900A82F5E /* ExcerciseSelectionViewController.swift in Sources */,
+				472F233A274C37FF00FE5448 /* MapViewController.swift in Sources */,
 				E318512A273F289C006104E3 /* AppDelegate.swift in Sources */,
 				E32CA9F327473B810052F16D /* ComposePostsViewController.swift in Sources */,
 				E318512C273F289C006104E3 /* SceneDelegate.swift in Sources */,
