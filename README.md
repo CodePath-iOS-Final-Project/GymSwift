@@ -110,7 +110,7 @@ Optional:
 
 Here's a walkthrough of implemented user stories:
 
-![](https://imgur.com/a/e2NeqQE)
+https://imgur.com/a/e2NeqQE
 
 ### [BONUS] Digital Wireframes & Mockups
 
