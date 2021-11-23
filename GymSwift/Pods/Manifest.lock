@@ -7,10 +7,12 @@ PODS:
     - Parse/Core (= 1.19.2)
   - Parse/Core (1.19.2):
     - Bolts/Tasks (= 1.9.1)
+  - TTGTagCollectionView (2.1.0)
 
 DEPENDENCIES:
   - AlamofireImage
   - Parse
+  - TTGTagCollectionView
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - Parse
+    - TTGTagCollectionView
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
+  TTGTagCollectionView: a2a8668c659b39e7a6ffd6590475ea53a7ae95f7
 
-PODFILE CHECKSUM: d10d9f2908201a9476d79ea7eaedf3f270dbae83
+PODFILE CHECKSUM: bb3c5e84e1b9b15d97c741e817ef3e535a802310
 
 COCOAPODS: 1.11.2
