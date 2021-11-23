@@ -33,19 +33,19 @@ Our plan is to create an app for college students to hold them accountable so th
 
 [x] Users can select a specific type of exercise.
 
-[ ] Users can log in and log out.
+[x] Infinite scroll.
 
-[ ] Users set, change, remove profile photo
+[x] Users can log in and log out.
 
-[ ] User can pull to refresh
+[x] User can pull to refresh.
 
-[ ] Infinite scroll
+[x] User can view comments. 
 
-[ ] User stays logged in across restarts
+[x] Users can add comments.
 
-[ ] User can view comments 
+[ ] Users set, change, remove profile photo.
 
-[ ] Users can add comment
+[ ] User stays logged in across restarts.
 
 [ ] Users profile picture is shown.
 
