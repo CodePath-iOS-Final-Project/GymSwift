@@ -45,7 +45,7 @@ Our plan is to create an app for college students to hold them accountable so th
 
 [ ] Users set, change, remove profile photo.
 
-[ ] User stays logged in across restarts.
+[x] User stays logged in across restarts.
 
 [ ] Users profile picture is shown.
 
@@ -110,7 +110,7 @@ Optional:
 
 Here's a walkthrough of implemented user stories:
 
-https://imgur.com/a/e2NeqQE
+![](https://imgur.com/a/e2NeqQE)
 
 ### [BONUS] Digital Wireframes & Mockups
 
