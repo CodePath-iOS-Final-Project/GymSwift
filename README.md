@@ -43,6 +43,10 @@ Our plan is to create an app for college students to hold them accountable so th
 
 [x] Users can add comments.
 
+[x] Map shows current location of user.
+
+[x] Map has a current location button.
+
 [ ] Users set, change, remove profile photo.
 
 [x] User stays logged in across restarts.
