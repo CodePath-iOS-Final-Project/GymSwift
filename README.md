@@ -114,7 +114,7 @@ Optional:
 
 Here's a walkthrough of implemented user stories:
 
-https://imgur.com/a/e2NeqQE
+https://imgur.com/a/n3pY6yC
 
 ### [BONUS] Digital Wireframes & Mockups
 
