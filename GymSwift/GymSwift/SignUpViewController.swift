@@ -10,7 +10,6 @@ import Parse
 
 class SignUpViewController: UIViewController {
     
-    
     @IBOutlet weak var addProfilePicField: UILabel!
     
     @IBOutlet weak var usernameField: UITextField!

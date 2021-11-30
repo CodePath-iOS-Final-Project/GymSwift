@@ -2,7 +2,7 @@
 //  PostDetailsViewController.swift
 //  GymSwift
 //
-//  Created by Rebecca Li on 11/30/21.
+//  Created by Rebecca Li on 11/26/21.
 //
 
 import UIKit
@@ -37,10 +37,10 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        numberOfPosts = 1
+//        numberOfPosts = 1
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = numberOfPosts
+//        query.limit = numberOfPosts
         
         query.findObjectsInBackground {(posts, error) in
             if posts != nil {
@@ -56,7 +56,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,7 +82,25 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        let comment = PFObject(className: "Comments")
+        
+        comment["text"] = "Random pushed comment"
+        comment["post"] = post
+        comment["author"] = PFUser.current()!
+        
+        post.add(comment, forKey: "comments")
+        post.saveInBackground{(success, error) in
+            if success {
+                print("Comment saved")
+            } else {
+                print("Error! Comment was not saved!")
+            }
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

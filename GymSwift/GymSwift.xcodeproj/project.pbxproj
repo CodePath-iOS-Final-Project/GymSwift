@@ -16,6 +16,7 @@
 		E3185133273F289F006104E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3185132273F289F006104E3 /* Assets.xcassets */; };
 		E3185136273F289F006104E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3185134273F289F006104E3 /* LaunchScreen.storyboard */; };
 		E3272A3E273F466600E536F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3272A3D273F466600E536F3 /* SignUpViewController.swift */; };
+		E327FCD72756B73500A95125 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327FCD62756B73500A95125 /* CommentCell.swift */; };
 		E32CA9EF274739180052F16D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CA9EE274739180052F16D /* SettingsViewController.swift */; };
 		E32CA9F327473B810052F16D /* ComposePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CA9F227473B810052F16D /* ComposePostsViewController.swift */; };
 		E32CA9F6274747EA0052F16D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CA9F5274747EA0052F16D /* PostCell.swift */; };
@@ -38,6 +39,7 @@
 		E3185135273F289F006104E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3185137273F289F006104E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3272A3D273F466600E536F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E327FCD62756B73500A95125 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		E32CA9EE274739180052F16D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E32CA9F227473B810052F16D /* ComposePostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePostsViewController.swift; sourceTree = "<group>"; };
 		E32CA9F5274747EA0052F16D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				E35722AA2747845200CD5ED4 /* FeedViewController.swift */,
 				E3A60EA02755E773008A6862 /* PostDetailsViewController.swift */,
 				E3A60EA32755F112008A6862 /* PostDetailsCommentCell.swift */,
+				E327FCD62756B73500A95125 /* CommentCell.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E327FCD72756B73500A95125 /* CommentCell.swift in Sources */,
 				E3BE1844273F2C4100D1FC98 /* LoginViewController.swift in Sources */,
 				E35722AB2747845200CD5ED4 /* FeedViewController.swift in Sources */,
 				A271EE112742E73900A82F5E /* ExcerciseSelectionViewController.swift in Sources */,

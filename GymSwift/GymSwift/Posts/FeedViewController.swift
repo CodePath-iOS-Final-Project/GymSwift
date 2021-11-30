@@ -105,11 +105,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
-        
+
         let post = posts[indexPath.row]
         let postDetailsViewController = segue.destination as! PostDetailsViewController
         postDetailsViewController.selectedPost = post
-        
+
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
