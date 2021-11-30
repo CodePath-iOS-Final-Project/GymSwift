@@ -6,8 +6,10 @@
 //
 
 import CoreLocation
+import CoreLocationUI
 import MapKit
 import UIKit
+
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -17,8 +19,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createLocationButton()
        
     }
+    
+        private func createLocationButton() {
+            let locationButton = CLLocationButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+            locationButton.center = CGPoint(x: view.center.x, y: view.frame.size.height-110)
+            locationButton.label = .currentLocation
+            locationButton.icon = .arrowOutline
+            locationButton.cornerRadius = 25.0
+            view.addSubview(locationButton)
+            locationButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        }
+    
+        @objc func didTapButton() {
+            manager.startUpdatingLocation()
+        }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
