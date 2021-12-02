@@ -551,7 +551,7 @@
                                             <outlet property="usernameTopLabel" destination="mrF-yU-RfF" id="BMB-k0-0eB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="fUU-vz-mRf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="75" id="fUU-vz-mRf" customClass="CommentCell" customModule="GymSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="510" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fUU-vz-mRf" id="PhE-1e-HxX">
@@ -582,6 +582,10 @@
                                                 <constraint firstItem="qRG-QZ-aZE" firstAttribute="leading" secondItem="ejl-qf-S22" secondAttribute="trailing" constant="8" id="sqc-cu-pVu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="qRG-QZ-aZE" id="hJ7-af-lSQ"/>
+                                            <outlet property="nameLabel" destination="ejl-qf-S22" id="v27-JA-4sz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
