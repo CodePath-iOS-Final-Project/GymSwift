@@ -29,7 +29,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
         let post = selectedPost!
         let comments = post["comments"]
-        
+
         print(selectedPost!)
         print("inside post[comments]?")
         print(comments!)
@@ -87,11 +87,13 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = selectedPost!
+//        let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
 //        let comments = post["comments"] as? [PFObject]
+ 
         let user = post["author"] as! PFUser
         
-        if indexPath.row == 0 {
+//        if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostDetailsCommentCell") as! PostDetailsCommentCell
             
             cell.usernameTopLabel.text = user.username
@@ -110,21 +112,22 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         
                 return cell
             }
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-            
-            // configure to show comments
-            let comment = comments[indexPath.row - 1]
-            cell.commentLabel.text = comment["text"] as? String
-            
-            let user = comment["author"] as! PFUser
-            cell.nameLabel.text = user.username
-            
-            return cell
-        }
-    }
+//        }
+//        else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+//
+//            // configure to show comments
+//            let comment = comments[indexPath.row - 1]
+////            cell.commentLabel.text = comment["text"] as? String
+//
+//            let user = comment["author"] as! PFUser
+//            cell.nameLabel.text = user.username
+//
+//            return cell
+//        }
+    }//end of func
     
-    
+    // details view = 1 section; 1 row = jsut a post, 1 row = comment...
     func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
