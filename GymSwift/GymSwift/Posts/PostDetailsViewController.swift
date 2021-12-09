@@ -90,7 +90,8 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
 //        let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
 //        let comments = post["comments"] as? [PFObject]
- 
+        print(post["comments.text"])
+        print(post["comments"]!)
         let user = post["author"] as! PFUser
         
 //        if indexPath.row == 0 {

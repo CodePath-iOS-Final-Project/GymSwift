@@ -367,7 +367,7 @@
                                             <outlet property="postsCaptionLabel" destination="dp6-MN-KNJ" id="NJO-kK-TvN"/>
                                             <outlet property="profileImageView" destination="dFh-2U-b3U" id="hI6-Lx-U5q"/>
                                             <outlet property="usernameLabel" destination="heK-Sg-13Z" id="BBr-qJ-LWF"/>
-                                            <segue destination="jHW-rg-GDr" kind="show" id="TbX-zM-hI2"/>
+                                            <segue destination="jHW-rg-GDr" kind="show" identifier="moreDetailsSegue" id="TbX-zM-hI2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -385,7 +385,7 @@
                     <navigationItem key="navigationItem" title="Posts/Tweets FeedView" id="hk8-kr-bYs">
                         <barButtonItem key="rightBarButtonItem" title="+" id="aNY-B4-nk7">
                             <connections>
-                                <segue destination="LIR-VN-ga1" kind="presentation" id="4Xu-8v-X5z"/>
+                                <segue destination="LIR-VN-ga1" kind="presentation" identifier="createPostSegue" id="4Xu-8v-X5z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
