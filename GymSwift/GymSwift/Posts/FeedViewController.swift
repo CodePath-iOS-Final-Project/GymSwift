@@ -18,6 +18,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let myRefreshControl = UIRefreshControl()
     
+    //executes 1, 1st thing that happens, called only once - when the view loads
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +32,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.refreshControl = myRefreshControl
     }
     
+    // called everytime view appears
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -47,10 +49,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
+    //viewwillappear: before didappear: what you want it to do(screen)
+    //viewwilldisappear: save settings/animations
+    //viewdiddisappear: cleanup
     
     func loadMorePosts(){
         let query = PFQuery(className: "Posts")
-        query.includeKey("author")
+        query.includeKeys(["author", "comments", "comments.author", "comments.text"])
         query.limit = numberOfPosts + 20
         
         query.findObjectsInBackground {(posts, error) in
@@ -71,11 +76,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return UITableView.automaticDimension
     }
     
-    
+    //how many rows you want [of posts]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
     
+    //customizing cells - for loop for cells 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         let post = posts[indexPath.row]
@@ -97,9 +103,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
         }
     }
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     
     //use segue identifier
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -115,10 +118,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             postDetailsViewController.selectedPost = post
 
             tableView.deselectRow(at: indexPath, animated: true)
-        }
-        else{
-//            performSegue(withIdentifier: "createPostSegue", sender: self)
-            print("nothing")
         }
     }
 }
