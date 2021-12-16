@@ -16,10 +16,13 @@
 		E3185133273F289F006104E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3185132273F289F006104E3 /* Assets.xcassets */; };
 		E3185136273F289F006104E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3185134273F289F006104E3 /* LaunchScreen.storyboard */; };
 		E3272A3E273F466600E536F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3272A3D273F466600E536F3 /* SignUpViewController.swift */; };
+		E327FCD72756B73500A95125 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327FCD62756B73500A95125 /* CommentCell.swift */; };
 		E32CA9EF274739180052F16D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CA9EE274739180052F16D /* SettingsViewController.swift */; };
 		E32CA9F327473B810052F16D /* ComposePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CA9F227473B810052F16D /* ComposePostsViewController.swift */; };
 		E32CA9F6274747EA0052F16D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CA9F5274747EA0052F16D /* PostCell.swift */; };
 		E35722AB2747845200CD5ED4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35722AA2747845200CD5ED4 /* FeedViewController.swift */; };
+		E3A60EA12755E773008A6862 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A60EA02755E773008A6862 /* PostDetailsViewController.swift */; };
+		E3A60EA42755F112008A6862 /* PostDetailsCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A60EA32755F112008A6862 /* PostDetailsCommentCell.swift */; };
 		E3BE1844273F2C4100D1FC98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE1843273F2C4100D1FC98 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +39,13 @@
 		E3185135273F289F006104E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3185137273F289F006104E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3272A3D273F466600E536F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E327FCD62756B73500A95125 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		E32CA9EE274739180052F16D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E32CA9F227473B810052F16D /* ComposePostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePostsViewController.swift; sourceTree = "<group>"; };
 		E32CA9F5274747EA0052F16D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		E35722AA2747845200CD5ED4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E3A60EA02755E773008A6862 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		E3A60EA32755F112008A6862 /* PostDetailsCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsCommentCell.swift; sourceTree = "<group>"; };
 		E3BE1843273F2C4100D1FC98 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E70F705FD0B6CADCE7061EA1 /* Pods-GymSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymSwift.release.xcconfig"; path = "Target Support Files/Pods-GymSwift/Pods-GymSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +92,7 @@
 		E3185128273F289C006104E3 /* GymSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E3AE296D274DC85D007430EC /* Setting */,
 				E32CA9F127473B5F0052F16D /* Posts */,
 				E3185129273F289C006104E3 /* AppDelegate.swift */,
 				E318512B273F289C006104E3 /* SceneDelegate.swift */,
@@ -96,7 +103,6 @@
 				E3BE1843273F2C4100D1FC98 /* LoginViewController.swift */,
 				E3272A3D273F466600E536F3 /* SignUpViewController.swift */,
 				A271EE102742E73900A82F5E /* ExcerciseSelectionViewController.swift */,
-				E32CA9EE274739180052F16D /* SettingsViewController.swift */,
 				472F2339274C37FF00FE5448 /* MapViewController.swift */,
 			);
 			path = GymSwift;
@@ -108,8 +114,19 @@
 				E32CA9F227473B810052F16D /* ComposePostsViewController.swift */,
 				E32CA9F5274747EA0052F16D /* PostCell.swift */,
 				E35722AA2747845200CD5ED4 /* FeedViewController.swift */,
+				E3A60EA02755E773008A6862 /* PostDetailsViewController.swift */,
+				E3A60EA32755F112008A6862 /* PostDetailsCommentCell.swift */,
+				E327FCD62756B73500A95125 /* CommentCell.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		E3AE296D274DC85D007430EC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E32CA9EE274739180052F16D /* SettingsViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		E600A1903E2CFBF0F188D598 /* Frameworks */ = {
@@ -234,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E327FCD72756B73500A95125 /* CommentCell.swift in Sources */,
 				E3BE1844273F2C4100D1FC98 /* LoginViewController.swift in Sources */,
 				E35722AB2747845200CD5ED4 /* FeedViewController.swift in Sources */,
 				A271EE112742E73900A82F5E /* ExcerciseSelectionViewController.swift in Sources */,
@@ -244,6 +262,8 @@
 				E3272A3E273F466600E536F3 /* SignUpViewController.swift in Sources */,
 				E32CA9EF274739180052F16D /* SettingsViewController.swift in Sources */,
 				E32CA9F6274747EA0052F16D /* PostCell.swift in Sources */,
+				E3A60EA42755F112008A6862 /* PostDetailsCommentCell.swift in Sources */,
+				E3A60EA12755E773008A6862 /* PostDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

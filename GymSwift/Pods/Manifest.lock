@@ -3,6 +3,9 @@ PODS:
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
   - Bolts/Tasks (1.9.1)
+  - MessageInputBar (0.4.1):
+    - MessageInputBar/Core (= 0.4.1)
+  - MessageInputBar/Core (0.4.1)
   - Parse (1.19.2):
     - Parse/Core (= 1.19.2)
   - Parse/Core (1.19.2):
@@ -11,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
+  - MessageInputBar
   - Parse
   - TTGTagCollectionView
 
@@ -19,6 +23,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Bolts
+    - MessageInputBar
     - Parse
     - TTGTagCollectionView
 
@@ -26,9 +31,10 @@ SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
   TTGTagCollectionView: a2a8668c659b39e7a6ffd6590475ea53a7ae95f7
 
-PODFILE CHECKSUM: bb3c5e84e1b9b15d97c741e817ef3e535a802310
+PODFILE CHECKSUM: 63d9a038236b85024172a057d343582eec879858
 
 COCOAPODS: 1.11.2
