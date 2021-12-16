@@ -14,8 +14,13 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
+    // to hold all the data from the clicked Post
     var selectedPost: PFObject!
+    // to hold all the comments from selectedPost
     var comments = [PFObject]()
+    
+    // get more comments after someone makes a comment---?
+    var getNewComments = [PFObject]()
     
     let commentBar = MessageInputBar()
     var showsCommentBar = false
@@ -39,6 +44,10 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        tableView.rowHeight = UITableView.automaticDimension;
+        tableView.estimatedRowHeight = UITableView.automaticDimension;
+        
         
 //        print(selectedPost!)
 //        print("inside post[comments]?")
@@ -64,10 +73,11 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+            return UITableView.automaticDimension
     }
     
     // details view = 1 section; 1 row = just a post, 1 row = comment...
+    // want just 1 post display
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -90,8 +100,8 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
         //need to reload comments sections ---------------------------------------------
-
-        
+        // ...?
+//        tableView.reloadData()
         
         //clear and dismiss the input bar
         commentBar.inputTextView.text = nil
@@ -101,29 +111,31 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         commentBar.inputTextView.resignFirstResponder()
     }
     
+    //how many rows you want [of posts]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count + 2
     }
     
+    //customizing each cells - for loop for cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = selectedPost["author"] as! PFUser
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostDetailsCommentCell") as! PostDetailsCommentCell
-            
+
             cell.usernameTopLabel.text = user.username
             cell.usernameBottomLabel.text = user.username
-            cell.captionLabel.text = (selectedPost["post"] as! String)
+            cell.captionLabel.text = selectedPost["post"] as? String ?? ""
             
-            let tryImageOpen = selectedPost["image"]
-            //if image does not exist...
-            if tryImageOpen as! NSObject == NSNull() {
-                cell.photoImage.removeFromSuperview()
-                cell.photoImage.image = nil
-                return cell
-            } else {
-                //if image exists...
-                let imageFile = selectedPost["image"] as! PFFileObject
+            // check if image is NULL
+            if let imageFile = selectedPost["image"] as? PFFileObject{
+                //cell has both photo & caption
+                
+                // check if there is caption
+                if cell.captionLabel.text == "" {
+                    cell.usernameBottomLabel.isHidden = true
+                }
+                
                 let urlString = imageFile.url!
                 let url = URL(string: urlString)!
         
@@ -131,6 +143,19 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         
                 return cell
             }
+            else{
+                cell.usernameBottomLabel.isHidden = true
+                //if no image, just display CAPTIONS!
+                cell.photoImage.removeFromSuperview()
+                
+                //programmtically do constraints for it
+                let constraints = [
+                    cell.usernameBottomLabel.topAnchor.constraint(equalTo: cell.profileImage.bottomAnchor, constant: 10),
+                    cell.captionLabel.topAnchor.constraint(equalTo: cell.profileImage.bottomAnchor, constant: 10),
+                ]
+                NSLayoutConstraint.activate(constraints)
+            }
+            return cell
         }
         else if indexPath.row <= comments.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
@@ -150,7 +175,7 @@ class PostDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }//end of func
     
-    // click on image to generate a comment
+    // select/click on the row to add comment
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = selectedPost!
         let comments = (post["comments"] as? [PFObject]) ?? []

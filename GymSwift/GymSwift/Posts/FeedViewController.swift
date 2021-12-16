@@ -49,6 +49,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
+    
+    //LIFECYCLE
     //viewwillappear: before didappear: what you want it to do(screen)
     //viewwilldisappear: save settings/animations
     //viewdiddisappear: cleanup
@@ -66,12 +68,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    // if it goes past last cell in screen, do something to display something
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row + 1 == posts.count{
             loadMorePosts()
         }
     }
     
+    // customize each row height automatically
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -81,7 +85,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return posts.count
     }
     
-    //customizing cells - for loop for cells 
+    //customizing each cells - for loop for cells 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         let post = posts[indexPath.row]

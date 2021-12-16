@@ -26,7 +26,7 @@ class ComposePostsViewController: UIViewController, UIImagePickerControllerDeleg
         
         if (postTextView.text.isEmpty && imageView.image == nil) {
             self.dismiss(animated: true, completion: nil)
-            print("text field & image is EMPTY, nothing saved to DB!")
+            print("text field & image is EMPTY, nothing to save into DB!")
         }
         else if (!postTextView.text.isEmpty && imageView.image == nil){
             post["image"] = NSNull()
