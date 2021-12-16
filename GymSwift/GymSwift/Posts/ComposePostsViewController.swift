@@ -38,7 +38,7 @@ class ComposePostsViewController: UIViewController, UIImagePickerControllerDeleg
                     print("Error! Something went wrong!")
                 }
             }
-        }//end of else-if
+        }
         else if (postTextView.text.isEmpty && imageView.image != nil) {
             let imageData:PFFileObject? = getPFFileFromImage(image: imageView.image!)
             if imageData != nil {
