@@ -156,7 +156,8 @@
                                 <rect key="frame" x="285" y="118" width="14" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77646992309999996" green="0.94946416870000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSF-or-XnZ">
                                 <rect key="frame" x="147" y="279" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -173,7 +174,6 @@
                     <connections>
                         <outlet property="nameField" destination="qRt-rs-8Ne" id="O7X-bJ-9zx"/>
                         <outlet property="passwordField" destination="5ed-n1-AYg" id="JsD-Py-81S"/>
-                        <outlet property="profileImageView" destination="8BS-O5-WCn" id="RXW-8C-thg"/>
                         <outlet property="usernameField" destination="orY-BA-fkb" id="2kI-aj-ssF"/>
                         <outlet property="workoutGoalsField" destination="Kb3-pm-tXV" id="l8s-Ho-X8T"/>
                         <segue destination="thm-ge-iUr" kind="show" identifier="exerciseSegue" id="Xzb-sJ-LZ1"/>
@@ -617,19 +617,19 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="commentLabel" destination="qRG-QZ-aZE" id="hJ7-af-lSQ"/>
-                                            <outlet property="nameLabel" destination="ejl-qf-S22" id="v27-JA-4sz"/>
+                                            <outlet property="commentLabel" destination="qRG-QZ-aZE" id="Asr-Kt-SiX"/>
+                                            <outlet property="nameLabel" destination="ejl-qf-S22" id="guB-sz-uCu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="V0N-Fc-alN">
-                                        <rect key="frame" x="0.0" y="502" width="414" height="37"/>
+                                        <rect key="frame" x="0.0" y="502" width="414" height="37.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V0N-Fc-alN" id="O3c-o3-ydk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T2-li-UMj">
-                                                    <rect key="frame" x="25" y="8" width="381" height="21"/>
+                                                    <rect key="frame" x="25" y="8" width="381" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
