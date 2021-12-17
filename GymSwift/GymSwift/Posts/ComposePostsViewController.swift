@@ -26,7 +26,7 @@ class ComposePostsViewController: UIViewController, UIImagePickerControllerDeleg
         
         if (postTextView.text.isEmpty && imageView.image == nil) {
             self.dismiss(animated: true, completion: nil)
-            print("text field & image is EMPTY, nothing saved to DB!")
+            print("text field & image is EMPTY, nothing to save into DB!")
         }
         else if (!postTextView.text.isEmpty && imageView.image == nil){
             post["image"] = NSNull()
@@ -38,7 +38,7 @@ class ComposePostsViewController: UIViewController, UIImagePickerControllerDeleg
                     print("Error! Something went wrong!")
                 }
             }
-        }//end of else-if
+        }
         else if (postTextView.text.isEmpty && imageView.image != nil) {
             let imageData:PFFileObject? = getPFFileFromImage(image: imageView.image!)
             if imageData != nil {
@@ -105,7 +105,7 @@ class ComposePostsViewController: UIViewController, UIImagePickerControllerDeleg
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af.imageScaled(to: size)
+        let scaledImage = image.af.imageAspectScaled(toFill: size)
         
         imageView.image = scaledImage
         dismiss(animated: true, completion: nil)

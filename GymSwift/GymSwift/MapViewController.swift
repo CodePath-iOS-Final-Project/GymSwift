@@ -19,8 +19,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createLocationButton()
-       
     }
     
         private func createLocationButton() {

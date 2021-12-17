@@ -24,7 +24,6 @@ class ExcerciseSelectionViewController: UIViewController {
         
         tagView.alignment = .center
         
-        
         let strings = ["Running", "Jogging", "Tennis", "Basketball", "Biking", "Gym", "Swimming", "Walking", "Bowling", "Yoga", "Skateboarding", "Soccer", "Football", "Volleyball", "Hiking", "Dancing", "Boxing", "Badminton"]
         
         for text in strings {
@@ -54,6 +53,6 @@ class ExcerciseSelectionViewController: UIViewController {
         selections.append(tagText)
         
         print("\(selections)")
-}
+    }
 
 }

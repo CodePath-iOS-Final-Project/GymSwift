@@ -10,7 +10,6 @@ import Parse
 
 class SettingsViewController: UIViewController {
     
-  
     @IBAction func onSignoutButton(_ sender: Any) {
         PFUser.logOut()
         
@@ -20,9 +19,7 @@ class SettingsViewController: UIViewController {
         
         delegate.window?.rootViewController = loginViewController
     }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
