@@ -1,24 +1,21 @@
 //
-//  CameraViewController.swift
+//  UserProfileViewController.swift
 //  GymSwift
 //
-//  Created by Nirvana Persaud  on 11/30/21.
+//  Created by Nirvana Persaud  on 12/9/21.
 //
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class UserProfileViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onSubmit(_ sender: Any) {
-    }
-    
+
     /*
     // MARK: - Navigation
 

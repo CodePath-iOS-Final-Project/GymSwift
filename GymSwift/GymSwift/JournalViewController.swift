@@ -1,24 +1,32 @@
 //
-//  CameraViewController.swift
+//  JournalViewController.swift
 //  GymSwift
 //
-//  Created by Nirvana Persaud  on 11/30/21.
+//  Created by Nirvana Persaud  on 12/9/21.
 //
 
 import UIKit
 
-class CameraViewController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
+class JournalViewController: UIViewController {
+    
+    @IBOutlet var table: UITableView!
+    @IBOutlet var label: UILabel!
+    
+    var models: [(title: String, note: String)] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //table.delegate = self
+        //table.dataSource = self
+        title = "Notes"
+        
+    
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onSubmit(_ sender: Any) {
-    }
-    
+
     /*
     // MARK: - Navigation
 

@@ -1,17 +1,15 @@
 //
-//  ProfileViewController.swift
+//  EditProfileViewController.swift
 //  GymSwift
 //
 //  Created by Nirvana Persaud  on 12/9/21.
 //
 
 import UIKit
-import Parse
 
-class ProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController {
 
     @IBOutlet weak var profilePicture: UIImageView!
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         profilePicture.layer.cornerRadius = profilePicture.frame.size.height/2
@@ -19,17 +17,10 @@ class ProfileViewController: UIViewController {
         profilePicture.clipsToBounds = true
     }
     
-    
-    @IBAction func onSignOutButton(_ sender: Any) {
-    PFUser.logOut()
-    let main = UIStoryboard(name: "Main", bundle: nil)
-    let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
-    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
-    
-    delegate.window?.rootViewController = loginViewController
+    @IBAction func onEditPicButton(_ sender: Any) {
+        
+        
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
