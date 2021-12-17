@@ -11,6 +11,10 @@
 		A2592DB62758A04100A301B0 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592DB52758A04100A301B0 /* ChatCell.swift */; };
 		A2592DB82759529100A301B0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592DB72759529100A301B0 /* ChatViewController.swift */; };
 		A271EE112742E73900A82F5E /* ExcerciseSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A271EE102742E73900A82F5E /* ExcerciseSelectionViewController.swift */; };
+		A2D084BF276D222D00B5E1C2 /* ConvoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D084BE276D222D00B5E1C2 /* ConvoCell.swift */; };
+		A2D084C1276D232700B5E1C2 /* ConvoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D084C0276D232700B5E1C2 /* ConvoViewController.swift */; };
+		A2D084C3276D2A1600B5E1C2 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D084C2276D2A1600B5E1C2 /* ContactsViewController.swift */; };
+		A2D084C5276D2A2E00B5E1C2 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D084C4276D2A2E00B5E1C2 /* ContactCell.swift */; };
 		BC80C74B09AF162470C5D144 /* Pods_GymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26933D6F7FAA608A54832018 /* Pods_GymSwift.framework */; };
 		E318512A273F289C006104E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3185129273F289C006104E3 /* AppDelegate.swift */; };
 		E318512C273F289C006104E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E318512B273F289C006104E3 /* SceneDelegate.swift */; };
@@ -34,6 +38,10 @@
 		A2592DB52758A04100A301B0 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		A2592DB72759529100A301B0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A271EE102742E73900A82F5E /* ExcerciseSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseSelectionViewController.swift; sourceTree = "<group>"; };
+		A2D084BE276D222D00B5E1C2 /* ConvoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvoCell.swift; sourceTree = "<group>"; };
+		A2D084C0276D232700B5E1C2 /* ConvoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvoViewController.swift; sourceTree = "<group>"; };
+		A2D084C2276D2A1600B5E1C2 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		A2D084C4276D2A2E00B5E1C2 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		CF4B939B22FE6E28B5F5607D /* Pods-GymSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymSwift.debug.xcconfig"; path = "Target Support Files/Pods-GymSwift/Pods-GymSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		E3185126273F289C006104E3 /* GymSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3185129273F289C006104E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +118,10 @@
 				472F2339274C37FF00FE5448 /* MapViewController.swift */,
 				A2592DB52758A04100A301B0 /* ChatCell.swift */,
 				A2592DB72759529100A301B0 /* ChatViewController.swift */,
+				A2D084BE276D222D00B5E1C2 /* ConvoCell.swift */,
+				A2D084C0276D232700B5E1C2 /* ConvoViewController.swift */,
+				A2D084C2276D2A1600B5E1C2 /* ContactsViewController.swift */,
+				A2D084C4276D2A2E00B5E1C2 /* ContactCell.swift */,
 			);
 			path = GymSwift;
 			sourceTree = "<group>";
@@ -262,14 +274,18 @@
 				E35722AB2747845200CD5ED4 /* FeedViewController.swift in Sources */,
 				A2592DB62758A04100A301B0 /* ChatCell.swift in Sources */,
 				A271EE112742E73900A82F5E /* ExcerciseSelectionViewController.swift in Sources */,
+				A2D084C3276D2A1600B5E1C2 /* ContactsViewController.swift in Sources */,
 				472F233A274C37FF00FE5448 /* MapViewController.swift in Sources */,
 				E318512A273F289C006104E3 /* AppDelegate.swift in Sources */,
 				E32CA9F327473B810052F16D /* ComposePostsViewController.swift in Sources */,
+				A2D084C5276D2A2E00B5E1C2 /* ContactCell.swift in Sources */,
+				A2D084C1276D232700B5E1C2 /* ConvoViewController.swift in Sources */,
 				E318512C273F289C006104E3 /* SceneDelegate.swift in Sources */,
 				E3272A3E273F466600E536F3 /* SignUpViewController.swift in Sources */,
 				E32CA9EF274739180052F16D /* SettingsViewController.swift in Sources */,
 				A2592DB82759529100A301B0 /* ChatViewController.swift in Sources */,
 				E32CA9F6274747EA0052F16D /* PostCell.swift in Sources */,
+				A2D084BF276D222D00B5E1C2 /* ConvoCell.swift in Sources */,
 				E3A60EA42755F112008A6862 /* PostDetailsCommentCell.swift in Sources */,
 				E3A60EA12755E773008A6862 /* PostDetailsViewController.swift in Sources */,
 			);
