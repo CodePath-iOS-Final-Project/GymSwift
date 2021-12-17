@@ -47,6 +47,10 @@ Our plan is to create an app for college students to hold them accountable so th
 
 [x] Map has a current location button.
 
+[x] Map shows nearby parks based on user location.
+
+[x] User can click into a location pin which magnifies the park's name.
+
 [ ] Users set, change, remove profile photo.
 
 [x] User stays logged in across restarts.
@@ -114,7 +118,7 @@ Optional:
 
 Here's a walkthrough of implemented user stories:
 
-https://imgur.com/a/n3pY6yC
+https://imgur.com/a/XAVvYDo
 
 ### [BONUS] Digital Wireframes & Mockups
 

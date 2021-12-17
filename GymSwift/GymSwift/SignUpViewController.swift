@@ -8,7 +8,13 @@
 import UIKit
 import Parse
 
+<<<<<<< HEAD
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+=======
+class SignUpViewController: UIViewController {
+    
+    @IBOutlet weak var addProfilePicField: UILabel!
+>>>>>>> main
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -99,7 +105,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate & 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
